@@ -8,16 +8,10 @@ Project details explanations can also be found on [medium](https://medium.com/@e
 **pyflashlight** is a deep learning framework constructed using C/C++, CUDA and Python. This is a personal project with educational purpose only! `pyflashlight` means **NOT** PyTorch, and we have **NO** claims to rivaling the already established PyTorch. The main objective of **pyflashlight** was to give a brief understanding of how a deep learning framework works internally. It implements the Tensor object, GPU support and an automatic differentiation system. 
 
 # 2 - Installation
-Install this package from PyPi (you can test on Colab!)
-
-```css
-$ pip install pyflashlight
-```
-
-or from cloning this repository
+Cloning this repository
 ```css
 $ sudo apt install nvidia-cuda-toolkit
-$ git clone https://github.com/lucasdelimanogueira/pyflashlight.git
+$ git clone clone https://github.com/Eeman1113/PyFlashlight.git
 $ cd build
 $ make
 $ cd ..
