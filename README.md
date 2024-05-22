@@ -5,6 +5,7 @@ A recreation of PyTorch from Scratch (with GPU Support and Automatic Differentia
 ![PyFlashlight Logo](https://github.com/Eeman1113/PyFlashlight/assets/54275491/d51e1ad7-0e73-466a-a461-577bf2614e91)
 
 ## About
+Project details explanations can also be found on [medium](https://medium.com/@eeman.majumder/i-made-pytorch-02238e268b63).
 
 **PyFlashlight** is a deep learning framework constructed using C/C++, CUDA, and Python. This personal project serves educational purposes only. It is not intended to rival the established PyTorch framework. The main objective of PyFlashlight is to provide insight into how a deep learning framework operates internally. It implements essential components such as the Tensor object, GPU support, and an automatic differentiation system.
 
