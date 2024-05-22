@@ -1,5 +1,6 @@
 # pyflashlight
 Recreating PyTorch from scratch (C/C++, CUDA and Python, with GPU support and automatic differentiation!)
+![2671157D-5A4D-4D09-A462-7D45B024D6B0](https://github.com/Eeman1113/PyFlashlight/assets/54275491/d51e1ad7-0e73-466a-a461-577bf2614e91)
 
 Project details explanations can also be found on [medium](https://medium.com/@eeman.majumder/i-made-pytorch-02238e268b63).
 
