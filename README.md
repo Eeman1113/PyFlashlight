@@ -1,15 +1,17 @@
-# pyflashlight
-Recreating PyTorch from scratch (C/C++, CUDA and Python, with GPU support and automatic differentiation!)
-![2671157D-5A4D-4D09-A462-7D45B024D6B0](https://github.com/Eeman1113/PyFlashlight/assets/54275491/d51e1ad7-0e73-466a-a461-577bf2614e91)
 
-Project details explanations can also be found on [medium](https://medium.com/@eeman.majumder/i-made-pytorch-02238e268b63).
+# PyFlashlight
 
-# 1 - About
-**pyflashlight** is a deep learning framework constructed using C/C++, CUDA and Python. This is a personal project with educational purpose only! `pyflashlight` means **NOT** PyTorch, and we have **NO** claims to rivaling the already established PyTorch. The main objective of **pyflashlight** was to give a brief understanding of how a deep learning framework works internally. It implements the Tensor object, GPU support and an automatic differentiation system. 
+![PyFlashlight Logo](https://github.com/Eeman1113/PyFlashlight/assets/54275491/d51e1ad7-0e73-466a-a461-577bf2614e91)
 
-# 2 - Installation
-Cloning this repository
-```css
+## About
+
+**PyFlashlight** is a deep learning framework constructed using C/C++, CUDA, and Python. This personal project serves educational purposes only. It is not intended to rival the established PyTorch framework. The main objective of PyFlashlight is to provide insight into how a deep learning framework operates internally. It implements essential components such as the Tensor object, GPU support, and an automatic differentiation system.
+
+## Installation
+
+Clone this repository and build PyFlashlight:
+
+```bash
 $ sudo apt install nvidia-cuda-toolkit
 $ git clone clone https://github.com/Eeman1113/PyFlashlight.git
 $ cd build
@@ -17,8 +19,10 @@ $ make
 $ cd ..
 ```
 
-# 3 - Get started
-### 3.1 - Tensor operations
+## Getting Started
+
+### 1. Tensor Operations
+
 ```python
 import pyflashlight
 
@@ -26,7 +30,7 @@ x1 = pyflashlight.Tensor([[1, 2],
                   [3, 4]], requires_grad=True).to("cuda")
 
 x2 = pyflashlight.Tensor([[4, 3], 
-                  [2, 1]], requires_grad=True).to("cuda)
+                  [2, 1]], requires_grad=True).to("cuda")
 
 x3 = x1 @ x2
 result = x3.sum()
@@ -35,12 +39,11 @@ result.backward
 print(x1.grad)
 ```
 
-### 3.2 - Create a model
+### 2. Creating a Model
 
 ```python
 import pyflashlight
 import pyflashlight.nn as nn
-import pyflashlight.optim as optim
 
 class MyModel(nn.Module):
     def __init__(self):
@@ -57,15 +60,16 @@ class MyModel(nn.Module):
         return out
 ```
 
-### 3.3 - Example training
+### 3. Example Training
+
 ```python
 import pyflashlight
 from pyflashlight.utils.data.dataloader import Dataloader
 from pyflashlight.pyflashlightvision import transforms
-import pyflashlight
 import pyflashlight.nn as nn
 import pyflashlight.optim as optim
 import random
+
 random.seed(1)
 
 BATCH_SIZE = 32
@@ -127,16 +131,15 @@ for epoch in range(epochs):
 
         optimizer.step()
 
-    print(f'Epoch [{epoch + 1}/{epochs}], Loss: {loss[0]:.4f}')
-    loss_list.append(loss[0])
-
+    print(f'Epoch [{epoch + 1}/{epochs}], Loss: {loss.item():.4f}')
+    loss_list.append(loss.item())
 ```
 
-
-# 4 - Progress
+# Progress
 
 | Development                  | Status      | Feature                                                                |
 | ---------------------------- | ----------- | ---------------------------------------------------------------------- |
 | Operations                   | in progress | <ul><li>[X] GPU Support</li><li>[X] Autograd</li><li>[X] Broadcasting</li></ul>                 |
 | Loss                         | in progress | <ul><li>[x] MSE</li><li>[X] Cross Entropy</li></ul>    |
 | Data                         | in progress    | <ul><li>[X] Dataset</li><li>[X] Batch</li><li>[X] Iterator</li></ul>   |
+
